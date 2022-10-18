@@ -38,10 +38,6 @@ final class HomeViewController: UIViewController {
         setupRefreshControl()
     }
     
-    // MARK: - Public methods
-    
-    // MARK: - IBAction
-    
     // MARK: - Private methods
     
     private func setupTableView() {
