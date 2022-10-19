@@ -41,7 +41,6 @@ final class HomeViewController: UIViewController {
     // MARK: - Private methods
     
     private func setupTableView() {
-        tableView.delegate = self
         tableView.dataSource = self
         tableView.refreshControl = refreshControl
     }
@@ -64,10 +63,6 @@ final class HomeViewController: UIViewController {
         refreshControl.endRefreshing()
     }
 }
-
-// MARK: - UITableViewDelegate
-
-extension HomeViewController: UITableViewDelegate { }
 
 // MARK: - UITableViewDataSource
 
