@@ -798,21 +798,61 @@
             </objects>
             <point key="canvasLocation" x="83" y="832"/>
         </scene>
-        <!--View Controller-->
+        <!--Actions View Controller-->
         <scene sceneID="QxV-9P-6FS">
             <objects>
-                <viewController id="X3h-nS-ayK" sceneMemberID="viewController">
+                <viewController id="X3h-nS-ayK" customClass="ActionsViewController" customModule="Insta" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9Bi-ND-dSP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LDW-IJ-Zy7">
+                                <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Действия" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pDf-Le-5rS">
+                                        <rect key="frame" x="16" y="10" width="93" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="5qm-cv-Lwl"/>
+                                    <constraint firstItem="pDf-Le-5rS" firstAttribute="centerY" secondItem="LDW-IJ-Zy7" secondAttribute="centerY" id="RGC-g6-hhn"/>
+                                    <constraint firstItem="pDf-Le-5rS" firstAttribute="leading" secondItem="LDW-IJ-Zy7" secondAttribute="leading" constant="16" id="Rim-rC-N1n"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="pDf-Le-5rS" secondAttribute="trailing" constant="20" symbolic="YES" id="ucN-z1-0YW"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="f7e-f3-zYX">
+                                <rect key="frame" x="0.0" y="93" width="375" height="636"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="X3h-nS-ayK" id="jE0-l2-Qt4"/>
+                                    <outlet property="delegate" destination="X3h-nS-ayK" id="UkP-2g-WWR"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="eJc-Y4-B27"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="LDW-IJ-Zy7" firstAttribute="trailing" secondItem="eJc-Y4-B27" secondAttribute="trailing" id="7IT-Vh-Pzc"/>
+                            <constraint firstItem="f7e-f3-zYX" firstAttribute="leading" secondItem="eJc-Y4-B27" secondAttribute="leading" id="Lob-3X-e27"/>
+                            <constraint firstItem="f7e-f3-zYX" firstAttribute="trailing" secondItem="eJc-Y4-B27" secondAttribute="trailing" id="UAq-LX-ara"/>
+                            <constraint firstItem="eJc-Y4-B27" firstAttribute="bottom" secondItem="f7e-f3-zYX" secondAttribute="bottom" id="f8c-2H-zwf"/>
+                            <constraint firstItem="f7e-f3-zYX" firstAttribute="top" secondItem="LDW-IJ-Zy7" secondAttribute="bottom" constant="5" id="gNn-hk-hmB"/>
+                            <constraint firstItem="LDW-IJ-Zy7" firstAttribute="top" secondItem="eJc-Y4-B27" secondAttribute="top" id="m7e-vV-jvb"/>
+                            <constraint firstItem="LDW-IJ-Zy7" firstAttribute="leading" secondItem="eJc-Y4-B27" secondAttribute="leading" id="qyq-Tj-Iqe"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="heartOutline" selectedImage="heartFillBlack" id="Ojs-DU-iSE"/>
+                    <connections>
+                        <outlet property="tableView" destination="f7e-f3-zYX" id="xz3-00-bSA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OxX-Ma-bzW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="952" y="832"/>
+            <point key="canvasLocation" x="951.20000000000005" y="831.2807881773399"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="pUQ-jq-H4A">
@@ -869,9 +909,9 @@
         <image name="direct" width="23" height="20"/>
         <image name="ellipsis" catalog="system" width="128" height="37"/>
         <image name="heartFillBlack" width="24" height="22"/>
-        <image name="heartOutline" width="25" height="22"/>
+        <image name="heartOutline" width="24" height="22"/>
         <image name="homeFill" width="22" height="22"/>
-        <image name="homeOutline" width="25" height="24"/>
+        <image name="homeOutline" width="24" height="24"/>
         <image name="like" width="24" height="21"/>
         <image name="logo" width="117" height="33"/>
         <image name="messenger" width="24" height="24"/>
@@ -879,9 +919,9 @@
         <image name="photo" width="564" height="1004"/>
         <image name="plus.circle" catalog="system" width="128" height="121"/>
         <image name="profileFill" width="23" height="23"/>
-        <image name="profileOutline" width="24" height="24"/>
+        <image name="profileOutline" width="23" height="23"/>
         <image name="save" width="21" height="24"/>
-        <image name="search" width="24" height="25"/>
+        <image name="search" width="23" height="24"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
         <namedColor name="blackBackGroundColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
