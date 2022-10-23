@@ -1212,10 +1212,10 @@ Sometimes I feel like being followed by giant cats. </string>
             </objects>
             <point key="canvasLocation" x="1754" y="832"/>
         </scene>
-        <!--Main Tab Bar View Controller-->
+        <!--Tab Bar Controller-->
         <scene sceneID="UOb-lo-xcd">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="azh-2h-Np6" customClass="MainTabBarViewController" customModule="Insta" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="azh-2h-Np6" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pNZ-s1-0sx">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
