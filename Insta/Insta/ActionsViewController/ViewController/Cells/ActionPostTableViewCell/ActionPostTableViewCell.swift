@@ -16,12 +16,6 @@ final class ActionPostTableViewCell: UITableViewCell {
     @IBOutlet private weak var contentLabel: UILabel!
     @IBOutlet private weak var postImageView: UIImageView!
     
-    // MARK: - Lifecycle
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-    
     // MARK: - Public methods
     
     func configure(model: ActionContent) {

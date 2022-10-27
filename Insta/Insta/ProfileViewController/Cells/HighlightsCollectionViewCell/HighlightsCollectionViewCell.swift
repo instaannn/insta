@@ -12,19 +12,13 @@ final class HighlightsCollectionViewCell: UICollectionViewCell {
 
     // MARK: - IBOutlet
 
-    @IBOutlet private weak var imageView: UIImageView!
-    @IBOutlet private weak var label: UILabel!
-    
-    // MARK: - Lifecycle
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
+    @IBOutlet private weak var highlightImageView: UIImageView!
+    @IBOutlet private weak var highlightLabel: UILabel!
 
     // MARK: - Public methods
     
-    func configure(model: Highlight) {
-        imageView.image = UIImage(named: model.imageName)
-        label.text = model.text
+    func configure(highlight: Highlight) {
+        highlightImageView.image = UIImage(named: highlight.imageName)
+        highlightLabel.text = highlight.text
     }
 }

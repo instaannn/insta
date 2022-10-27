@@ -12,17 +12,11 @@ final class PostCollectionViewCell: UICollectionViewCell {
 
     // MARK: - IBOutlet
     
-    @IBOutlet private weak var imageView: UIImageView!
-    
-    // MARK: - Lifecycle
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
+    @IBOutlet private weak var postImageView: UIImageView!
     
     // MARK: - Public methods
     
     func configure(model: Post) {
-        imageView.image = UIImage(named: model.imageName)
+        postImageView.image = UIImage(named: model.imageName)
     }
 }
