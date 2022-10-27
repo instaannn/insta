@@ -17,12 +17,6 @@ final class ActionSubscribeTableViewCell: UITableViewCell {
     @IBOutlet private weak var subscribeButton: UIButton!
     @IBOutlet private weak var youSubscribedButton: UIButton!
     
-    // MARK: - Lifecycle
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-    
     // MARK: - Public methods
     
     func configure(model: ActionContent) {
